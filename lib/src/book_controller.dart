@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
 class BookController extends ChangeNotifier {
+
+  BookController({int? initialIndex}){
+    if (initialIndex != null) {
+      currentIndex = initialIndex;
+    }
+  }
+
   int nextType = 0;
   int currentIndex = 0; // 当前页
   int goToIndex = 0; // 跳转页
